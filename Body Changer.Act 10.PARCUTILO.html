@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Body Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+.wrapper {
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    padding: 6px 13px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.wrapper .center {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center h1 {
+    color: white;
+    font-size: 70px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.center h2 {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.center .buttons {
+    margin-top: 40px;
+}
+
+.buttons button {
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background: black;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    transition: 0.4s;
+    margin: 10px;
+}
+
+.buttons button:hover {
+    background: #333;
+}
+
+.buttons button:nth-child(1):hover {
+    background: blue;
+}
+
+.buttons button:nth-child(2):hover {
+    background: pink;
+}
+
+.buttons button:nth-child(3):hover {
+    background: brown;
+}
+
+</style>
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JAVA</a></li>
+            </ul>
+        </nav>
+        <div class="center">
+            <h1>Welcome To JavaScript</h1>
+            <h2>Body Style Changer</h2>
+            <div class="buttons">
+                <button onclick="changeToMaleStyle()">Male</button>
+                <button onclick="changeToFemaleStyle()">Female</button>
+                <button onclick="changeToOldStyle()">Old Age</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    function changeToMaleStyle() {
+        document.body.style.backgroundColor = "blue";
+        document.body.style.color = "white";
+        document.body.style.fontFamily = "Arial, sans-serif";
+    }
+
+    function changeToFemaleStyle() {
+        document.body.style.backgroundColor = "pink";
+        document.body.style.color = "darkblue";
+        document.body.style.fontFamily = "Georgia, serif";
+    }
+
+    function changeToOldStyle() {
+    document.body.style.fontSize = "40px"; 
+    document.body.style.backgroundColor = "brown";
+    document.body.style.color = "white";
+}
+
+
+    </script>
+</body>
+</html>
